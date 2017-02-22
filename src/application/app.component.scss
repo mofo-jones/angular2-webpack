@@ -1,0 +1,111 @@
+// styles applied on :host are applied on the current component, "app" in this case
+
+
+/*
+ -> Movido para app.scss
+html, body {
+    height: 100%;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+*/
+
+
+/*Flexbox gives us the flexiness we need. The top just stays put as there is no scrolling on the body due to the page never exceeding viewport height*/
+.Top {
+    display: block;;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+/*This is our main wrapping element, it's made 100vh high to ensure it is always the correct size and then moved into place and padded with negative margin and padding*/
+.Container {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: -57px;
+    padding-top: 57px;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+}
+/*All the scrollable sections should overflow and be whatever height they need to be. As they are flex-items (due to being inside a flex container) they could be made to stretch full height at all times if needed.
+WebKit inertia scrolling is being added here for any present/future devices that are able to make use of it.
+*/
+.Left,
+.Middle,
+.Right {
+    overflow: auto;
+    height: auto;
+    padding: .5rem;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+
+/*  Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
+.Left {
+    width: 180px;
+    // background-color: indigo;
+}
+
+.Middle {
+    flex: 1;
+    padding-left: 3%;
+    padding-right: 3%; 
+    padding-top: 2%; 
+    padding-bottom: 2%; 
+}
+
+.Middle::-webkit-scrollbar
+{
+    width: 8px;
+}
+
+.Middle::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.Middle::-webkit-scrollbar-thumb {
+    /*    border-radius: 25px;
+        background-color: rgb(61, 183, 119);
+        outline: 1px solid rgb(57, 171, 111);*/
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #0275d8; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+.Right {
+    width: 12.5rem;
+    // background-color: violet;
+}
+
+.zero-margin{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.my-top {
+    display: flex;
+    position: relative;
+    z-index: 10;
+}
+.mm{
+    display:block;
+    position:absolute;
+}
+
+.body {
+    background: #229cff;
+    background-image: url("/img/z1.png"), url("/img/z2.png");
+    background-repeat: repeat-x, repeat;
+}
+
+.bk {
+    background-color: #122233 !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAF0lEQVQYV2NkQAKMULYPAwPDFhgHLAYAD6UBBHE0TWoAAAAASUVORK5CYII=) repeat;
+}

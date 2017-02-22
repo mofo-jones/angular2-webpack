@@ -1,0 +1,40 @@
+.body {
+    background: #229cff;
+    background-image: url("/img/z1.png"), url("/img/z2.png");
+    background-repeat: repeat-x, repeat;
+}
+
+
+.bk-panel {
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.bk-panel-title {
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.07);
+    text-align: center;
+}
+
+.bk-panel-title span {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.add-border-panel {
+    border-right: 13px solid #0668bc;
+    border-left: 13px solid #0668bc;
+}

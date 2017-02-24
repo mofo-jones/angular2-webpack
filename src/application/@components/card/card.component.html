@@ -1,16 +1,19 @@
-<div class="panel">
-    <h4 class="text-centered">{{capa.titulo}}</h4>    
-    <div class="text-centered">
-        <div class="img-panel">
-            <!-- <img src="{{capa.imagem}}" alt="{{card.info}}" class="rounded"> -->
-            <img src="{{capa.imagem}}" class="rounded">
+<a [routerLink]="[ 'artigo/' + capa.site_artigo_id]">
+    <div class="panel">
+        <h4 class="text-centered">{{capa.titulo}}</h4>    
+        <div class="text-centered">
+            <div class="img-panel">
+                <!-- <img src="{{capa.imagem}}" alt="{{card.info}}" class="rounded"> -->
+                <img src="{{capa.imagem}}" class="rounded">
+            </div>
         </div>
+        <div class="text-centered" style="border-bottom: 1px solid #ffffff; padding-top: 10px; padding-left: 5px; padding-right: 5px;"> {{capa.subtitulo}} </div>
+        <div class="text-centered" style="min-height: 75px; padding-top: 10px;">
+            {{capa.descricao}}
+        </div>
+        <!--<div class="text-centered">-->
+
+        <!--<a class="btn btn-primary btn-lg" [routerLink]="[capa.link]">{{capa.link_titulo}}</a>-->
+        <!--</div>-->
     </div>
-    <div class="text-centered" style="border-bottom: 1px solid #ffffff; padding-top: 10px; padding-left: 5px; padding-right: 5px;"> {{capa.subtitulo}} </div>
-    <div class="text-centered" style="min-height: 75px; padding-top: 10px;">
-        {{capa.descricao}}
-    </div>
-    <div class="text-centered">
-        <a class="btn btn-primary btn-lg" href="{{capa.link}}" role="button">{{capa.link_titulo}}</a>
-    </div>
-</div>
+</a>

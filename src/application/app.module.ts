@@ -5,13 +5,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
+import { ArtigoModule } from './artigo/artigo.module';
 import { AboutComponent } from './about/about.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
- import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
+import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 
 import { CardModule } from './@components/card/card.module';
 import { MenuModule } from './@components/menu/menu.module';
@@ -26,7 +27,8 @@ import { MenuModule } from './@components/menu/menu.module';
         HighlightJsModule,
         CardModule,
         MenuModule,
-        HomeModule
+        HomeModule,
+        ArtigoModule
     ],
     declarations:
     [

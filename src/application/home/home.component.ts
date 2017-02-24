@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
+        console.log(this.el.nativeElement.querySelector('.typescript'));
         this.serviceJs.highlight(this.el.nativeElement.querySelector('.typescript'));
     }
 
@@ -49,7 +50,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     // import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
     
      @NgModule({
-        imports: [CommonModule, FormsModule, CardModule, ClipboardModule, HighlightJsModule],
+        imports: [CommonModule, FormsModule, CardModule, ClipboardModule, HighlightJsModule]1111111111111111111111111111,
         declarations: [HomeComponent],
         exports: [HomeComponent],
         providers: [HomeService, HighlightJsService]

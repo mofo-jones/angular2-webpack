@@ -16,6 +16,5 @@ export class CardComponent implements OnInit {
 
     ngOnInit() {
         // console.log('Card:>', this.card.title);
-
     }
 }
